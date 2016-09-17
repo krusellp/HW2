@@ -78,5 +78,5 @@ and myandgate(out, in1, in2)
 You need to have previously declared `out`, `in1`, and `in2`, to be some sort of physical entity (`wire`, `reg`).
 
 ### Tutorials
-There are some Verilog resources listed on the (course website)[http://sites.google.com/site/ca16fall/resources/verilog]
+There are some Verilog resources listed on the [course website](http://sites.google.com/site/ca16fall/resources/verilog)
 
