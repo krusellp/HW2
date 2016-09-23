@@ -1,4 +1,9 @@
 // Decoder circuit
+// define gates with delays
+
+`define AND and #50
+`define OR or #50
+`define NOT not #50
 
 module behavioralDecoder
 (
@@ -18,5 +23,15 @@ module structuralDecoder
     input enable
 );
     // Your decoder code here
+    wire nA0;
+    wire nA1;
+
+    `NOT U0(nA0, address0);
+    `NOT U1(nA1, address1);
+
+    `AND U2(out0, nA0, nA1, enable);
+    `AND U3(out1, address0, nA1, enable);
+    `AND U4(out2, nA0, address1, enable);
+    `AND U5(out3, address0, address1, enable);
 endmodule
 
